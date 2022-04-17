@@ -1,0 +1,22 @@
+.service-container{
+
+    border: none;
+    border-radius:10px ;
+   -webkit-box-shadow:0 2px 4px 0px gray, 0 4px 16px 0 gray;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: white;
+}
+.service-container img{
+    border-radius:10px ;
+}
+.btn{
+    background-color: hsl(39, 92%, 50%);
+    font-size: 20px;
+    width: 80%;
+    padding: 3px;
+    font: sans-serif;
+    margin-bottom: 2px;
+    
+}

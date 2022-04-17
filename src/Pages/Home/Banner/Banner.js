@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import banner1 from '../../../images/banner/banner1.jpg'
 import banner2 from '../../../images/banner/banner2.jpg'
 import banner3 from '../../../images/banner/banner3.jpg'
+import './Banner.css'
 
 
 
@@ -21,8 +22,8 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                   
+                    <p className='carousel-text'>You don’t have to be great to start. But you have to start to be great.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -33,8 +34,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    
+                    <p className='carousel-text'>Every morning you have two choices: continue to sleep with your dreams, or wake up and chase them.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -45,9 +46,9 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                  
+                    <p  className='carousel-text'>
+                    Nobody can go back and start a new beginning, but anyone can start today and make a new ending.
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
