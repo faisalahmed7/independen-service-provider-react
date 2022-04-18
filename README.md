@@ -1,6 +1,6 @@
 # Project Name
 
-Faisal's StudyPoint [VIsit Website](https://laptop-review-react.netlify.app/). 
+Faisal's StudyPoint [VIsit Website](https://home-tutor-7ac73.web.app/). 
  ***
  ## Description
  * Single home tutor service. 
