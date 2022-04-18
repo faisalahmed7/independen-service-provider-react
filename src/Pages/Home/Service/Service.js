@@ -20,7 +20,7 @@ const Service = ({service}) => {
             <p>{description}</p>
             
             </div>
-            <button onClick={()=> navigateToCheckOut(id)} className='btn'>Select Service</button>
+            <button onClick={()=> navigateToCheckOut(id)} className='service-button'>Select Service</button>
         </div>
     );
 };
