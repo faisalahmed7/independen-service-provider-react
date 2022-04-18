@@ -1,23 +1,23 @@
 import React from 'react';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import google from '../../../images/social/google.png'
-// import github from '../../../images/social/github.png'
+import github from '../../../images/social/github.png'
 
 const SocialLogin = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGithub, githubUser, githubloading, githubError] = useSignInWithGithub(auth);
     const navigate = useNavigate()
 
     let showError;
-    if (error) {
+    if (googleError || githubError) {
 
-        showError = <div>
-            <p className='text-danger'>Error: {error.message}</p>
-        </div>
+        showError = <p className='text-danger'>Error: {googleError?.message}{githubError.message}</p>
+
 
     }
-    if (user) {
+    if (googleUser || githubUser) {
         navigate('/home')
     }
     return (
@@ -34,12 +34,10 @@ const SocialLogin = () => {
                 <img style={{ width: "30px" }} src={google} alt="" />
                 <span className='px-2'>Google Sign In</span>
             </button>
-            {/* <button
-                    
-                    style={{ borderRadius: '25px' }} className='btn social w-50 d-block mx-auto my-2 mb-5'>
-                    <img style={{ width: "30px" }} src={github} alt="" />
-                    <span className='px-2'>GitHub Sign In</span>
-                </button> */}
+            <button onClick={() => signInWithGithub()} style={{ borderRadius: '25px' }} className='btn social w-50 d-block mx-auto my-2 mb-5'>
+                <img style={{ width: "30px" }} src={github} alt="" />
+                <span className='px-2'>GitHub Sign In</span>
+            </button>
 
 
         </div>

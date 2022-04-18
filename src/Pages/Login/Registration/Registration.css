@@ -6,7 +6,7 @@
     margin-top: 40px;
     -webkit-box-shadow: 0 2px 4px 0px gray, 0 4px 16px 0 gray;
 }
-.registration-form input{
+.registration-form input:not([type=checkbox]){
     display: block;
     width: 100%;
     height: 40px;
