@@ -1,34 +1,40 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+
 import './Checkout.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = () => {
+    
     const { serviceId } = useParams()
+
+    const handleProceed=e=>{
+        e.preventDefault()
+        const name=e.target.name.value
+        const address=e.target.address.value
+        const mobile=e.target.mobile.value
+        const email=e.target.email.value
+        const subject=e.target.subject.value
+
+        toast('Congratulation You Have Enrolled for Desire Subject')
+        
+    }
     return (
-        <div className='form-container'>
-            <div>
-                <h2 className='form-title'>Your Information</h2>
-            <form>
-                    <div className="input-group">
-                        <label htmlFor="name">Your Name</label>
-                        <input type="text" name="name" id="" required />
-                    </div>
-                    <div className="input-group">
-                        <label htmlFor="email">Your Email</label>
-                        <input readOnly type="email" name="email" id="" required />
-                    </div>
-                    <div className="input-group">
-                        <label htmlFor="address">Address</label>
-                        <input type="text" name="address" id="" required />
-                    </div>
-                    <div className="input-group">
-                        <label htmlFor="phone">Phone</label>
-                        <input  type="text" name="confirm-Phone" id="" required />
-                    </div>
-                    
-                    <input className='form-submit' type="submit" value="Proceed" />
-                </form>
-                </div>
+        <div className='student-form text-center'>
+            <h2 className='text-success text-center mt-5'>Your Information</h2>
+            <form onSubmit={handleProceed}>
+                <input type="text" name="name" id="name" placeholder='Your Name' required />
+                <input type="text" name="address" id="address" placeholder='Your Address' required />
+                <input type="text" name="mobile" id="mobile" placeholder='Mobile ' required />
+                <input type="email" name="email" id="email" placeholder='Your Email' required />
+                <input type="text" name="subject" id="subject" placeholder='Your Desire Subject' required />
+               <input className='btn btn-success w-50  mx-auto mt-2' type="submit" value="Proceed" />
+            </form>
+            <ToastContainer/>
+           
+       <Link className='btn btn-info d-block text-decoration-none  text-center' to='/home'>Back</Link>
+
         </div>
     );
 };

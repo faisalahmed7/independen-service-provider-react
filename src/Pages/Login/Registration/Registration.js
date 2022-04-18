@@ -10,6 +10,7 @@ import Loading from '../../../Shared/Loading/Loading';
 const Registration = () => {
     const navigate = useNavigate()
     const [agree, setAgree] = useState(false);
+    const [passError,setPassError] =useState('')
     const [
         createUserWithEmailAndPassword,
         user,
@@ -34,6 +35,7 @@ const Registration = () => {
         const password = e.target.password.value;
         const confirmPassword = e.target.confirmPassword.value
         if (password !== confirmPassword) {
+            setPassError('Wrong Password ! Please Re-type Your Password')
             return
         }
         else {
@@ -54,6 +56,7 @@ const Registration = () => {
                 <input type="email" name="email" id="email" placeholder='Your Email' required />
                 <input type="password" name="password" id="password" placeholder='Your Password' required />
                 <input type="password" name="confirmPassword" id="confirmPassword" placeholder='Re-type Password' required />
+                <p style={{ color: 'red' }}>{passError}</p>
                 <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
                 <label className={`ps-2 ${agree ? 'text-primary' : 'text-danger'}`} htmlFor="terms"> Accept Car Service Terms and Conditions</label>
 
