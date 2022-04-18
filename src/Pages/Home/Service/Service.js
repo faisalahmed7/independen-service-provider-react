@@ -15,9 +15,9 @@ const Service = ({service}) => {
             <img src={image} alt=''></img>
             {/* <img className='w-100' src={image} alt="" /> */}
             <div className="img-text">
-            <h2 className='text-center'>{name}</h2>
-            <p>Price: {price}</p>
-            <p>{description}</p>
+            <h2 className='text-center '>{name}</h2>
+            <p className='price'>Price: {price}</p>
+            <p className='description'>{description}</p>
             
             </div>
             <button onClick={()=> navigateToCheckOut(id)} className='service-button'>Select Service</button>
