@@ -3,23 +3,23 @@
     "name": "Physics",
     "id": "1",
     "price": "1500 BDT/mo",
-    "description":"Physics is one of the most interesting subjects in the field of science,The laws of physics is the canvas God laid down on which to paint his masterpiece.the universe is an artificial simulation then the mathematics is its code and a physicist is a programmer",
-    "image": "https://i.ibb.co/L5GNyMm/rsz-vedrana-filipovic-jxqtaxf5wmy-unsplash.jpg"
+    "description":"Not only is the Universe stranger than we think, it is stranger than we can think",
+    "image": "https://i.ibb.co/LJ45Q89/rsz-artturi-jalli-gyrya37faki-unsplash.jpg"
     
     },
     {
     "name": "Chemistry",
     "id": "2",
     "price": "1500 BDT/mo",
-    "description":"Chemistry is one of the most interesting subjects in the field of science,Chemistry begins in the stars. The stars are the source of the chemical elements, which are the building blocks of matter and the core of our subject.",
-    "image": "https://i.ibb.co/LJ45Q89/rsz-artturi-jalli-gyrya37faki-unsplash.jpg"
+    "description":"Chemistry begins in the stars. The stars are the source of the chemical elements.",
+    "image": " https://i.ibb.co/L5GNyMm/rsz-vedrana-filipovic-jxqtaxf5wmy-unsplash.jpg"
     
     },
     {
     "name": "Mathematics",
     "id": "3",
     "price": "1500 BDT/mo",
-    "description":"Mathematics is the most beautiful and most powerful creation of the human spirit. But sometimes, this can be hard to see, and even harder to convey to students who don’t — yet — share your passion.The more you practice , the more you know. ",
+    "description":"Mathematics is the most beautiful and most powerful creation of the human spirit. ",
     "image": "https://i.ibb.co/N2zyb7R/rsz-1jeswin-thomas-hecib2an4t4-unsplash.jpg"
     }
 ]
