@@ -23,7 +23,6 @@ const Header = () => {
             </Nav>
             <Nav>
               <Nav.Link as={CustomActive} to="/home"><span>Home</span></Nav.Link>
-              <Nav.Link href="home#services"><span>Services</span></Nav.Link>
               <Nav.Link as={CustomActive} to="/blogs"><span>Blogs</span></Nav.Link>
               <Nav.Link as={CustomActive} to="/about"><span>About</span></Nav.Link>
               
