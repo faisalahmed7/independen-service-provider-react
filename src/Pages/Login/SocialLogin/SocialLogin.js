@@ -4,13 +4,20 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import google from '../../../images/social/google.png'
 import github from '../../../images/social/github.png'
+import Loading from '../../../Shared/Loading/Loading';
 
 const SocialLogin = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
-    const [signInWithGithub, githubUser, githubloading, githubError] = useSignInWithGithub(auth);
+    const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
     const navigate = useNavigate()
 
     let showError;
+
+
+    if(googleLoading || githubLoading){
+        return <Loading></Loading>
+
+    }
     if (googleError || githubError) {
 
         showError = <p className='text-danger'>Error: {googleError?.message}{githubError.message}</p>

@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import auth from '../../../firebase.init'
 import './Registration.css'
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../../Shared/Loading/Loading';
 
 
 const Registration = () => {
@@ -17,6 +18,11 @@ const Registration = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+
+
+    if(updating || loading){
+        return <Loading></Loading>
+    }
     if (user) {
         console.log('user',user)
     }
